@@ -1,101 +1,219 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cadastro.css">
-    <title>Cadastro Miadote</title>
-</head>
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@600&display=swap%27%27%27');
 
-<body>
-    <div class="container">
-        <div class="form-image">
-            <img src="img/undraw_good_doggy_re_eet7.svg">
-        </div>
-        
-        <div class="form">
-            <form action="#">
-                <div class="logo">
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0;
+    font-family: 'Nunito';
+}
 
-                <div class="form-header">
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
 
-                        <img src="img/logogato.png" width="120" height="50" />
-                    </div>
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+}
 
-                    <div class="title">
-                        <h1>Criar conta </h1>
-                    </div>
+.form-image {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    background: #C299D3;
+    padding: 1rem;
+}
 
-                    <div class="login-button">
-                        <button> <a href="#"> Entrar </a></button>
-                    </div>
-                </div>
+.form-image img {
+    width: 31rem;
+}
 
-                <div class="input-group">
-                    <div class="input-box">
-                        <label for="name">Nome</label>
-                        <input id="name" type="text" name="name" placeholder="Digite seu nome" required>
-                    </div>
+.logo {
+    width: 50%;
+    display: flex;
+}
 
-                    <div class="input-box">
-                        <label for="lastname">Sobrenome</label>
-                        <input id="lastname" type="text" name="lastname" placeholder="Digite seu sobrenome" required>
-                    </div>
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
 
-                    <div class="input-box">
-                        <label for="email">Email</label>
-                        <input id="email" type="email" name="email" placeholder="Digite seu email" required>
-                    </div>
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
 
-                    <div class="input-box">
-                        <label for="number"">Celular</label>
-                        <input id="number" type="tel" name="number" placeholder="(xx) xxxx-xxxx" required>
-                    </div>
+.login-button {
+    display: flex;
+    align-items: center;
+}
 
-                    <div class="input-box">
-                        <label for="password"">Senha</label>
-                        <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
-                    </div>
+.login-button button {
+    border: none;
+    background-color: #471C64;
+    padding: 0.5rem 2.1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-                    <div class="input-box">
-                        <label for="Confirmpassword"">Confirme sua senha</label>
-                        <input id="Confirmpassword" type="password" name="Confirmpassword" placeholder="Digite sua senha" required>
-                    </div>
-                </div>
-                <div class="gender-inputs">
-                    <div class="gender-title">
-                        <h6> Gênero</h6>
-                    </div>
+.login-button button:hover {
+    background-color: #C299D3;
+}
 
-                    <div class="gender-group">
-                        <div class="gender-input">
-                            <input type="radio" id="female" name="gender">
-                            <label for="female">Feminino</label>
-                        </div>
+.login-button button a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #fff;
+}
 
-                        <div class="gender-input">
-                            <input type="radio" id="male" name="gender">
-                            <label for="male">Masculino</label>
-                        </div>
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    background-color: #471C64;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
 
-                        <div class="gender-input">
-                            <input type="radio" id="others" name="gender">
-                            <label for="others">Não-binário (Elu-delu)</label>
-                        </div>
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
 
-                        <div class="gender-input">
-                            <input type="radio" id="none" name="gender">
-                            <label for="none">Prefiro não dizer</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="continue-button">
-                    <button><a href="#">Cadastrar</a></button>
-                </div>
-            </form>
-        </div>
-    </div>
-</body>
+.input-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.1rem;
+}
 
-</html>
+.input-box input {
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px #0000001c;
+    font-size: 0.8rem;
+}
+
+.input-box input:hover {
+    background-color: #eeeeee75;
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #F369B4;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+.input-box input::placeholder {
+    color: #000000be;
+}
+
+.gender-group {
+    justify-content: space-between;
+    margin-top: 0.62rem;
+    padding: 0 0 .5rem;
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: 200px 200px;
+}
+
+.gender-input {
+    display: flex;
+    align-items: center;
+}
+
+.gender-input input {
+    margin-right: 0.35rem;
+}
+
+.gender-input label {
+    font-size: 0.81rem;
+    font-weight: 600;
+    color: #000000c0;
+}
+
+
+.continue-button button {
+    width: 30%;
+    margin-top: 2.5rem;
+    border: none;
+    background-color: #622189;
+    padding: 0.62rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button button:hover {
+    background-color: #C299D3;
+}
+
+.continue-button button a {
+    text-decoration: none;
+    font-size: 0.93rem;
+    font-weight: 500;
+    color: #fff;
+    
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .container {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .container {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+}
