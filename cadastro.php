@@ -16,7 +16,7 @@
         </div>
         
         <div class="form">
-            <form action="" method="post">
+            <form action="validacao.php" method="post">
                 
                 <div class="logo">
                     <img src="logogato.png" width="160" height="65" />
@@ -91,9 +91,9 @@
                     </div>
                 </div>
 
-                <div class="continue-button">
-                    <button><a href="">Cadastrar</a></button>
-                </div>
+                <div class="button">
+        <button type="submit" name"submit" >Cadastrar</button>
+    </div>
             </form>
         </div>
     </div>
