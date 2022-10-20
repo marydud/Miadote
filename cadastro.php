@@ -92,7 +92,7 @@
                 </div>
 
                 <div class="continue-button">
-                    <button><a href="validação.php">Cadastrar</a></button>
+                    <button><a href="">Cadastrar</a></button>
                 </div>
             </form>
         </div>
