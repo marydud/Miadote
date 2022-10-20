@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['continue-button']))
+if(isset($_POST['submit']))
 
 {
 	include_once('conexaoo.php');
