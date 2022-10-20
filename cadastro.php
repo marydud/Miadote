@@ -16,7 +16,7 @@
         </div>
         
         <div class="form">
-            <form action="validação.php" method="post">
+            <form action="" method="post">
                 
                 <div class="logo">
                     <img src="logogato.png" width="160" height="65" />
