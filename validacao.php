@@ -3,7 +3,7 @@
 if(isset($_POST['submit']))
 
 {
-	include_once('conexaoo.php');
+	include_once('conexao.php');
 
 		$nome = $_POST['name'];
 		$sobrenome = $_POST['lastname'];
