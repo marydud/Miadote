@@ -1,3 +1,20 @@
+<?php
+
+if(isset($_POST['submit']))
+
+{
+	include_once('conexao.php');
+
+		$nome = $_POST['name'];
+		$email = $_POST['email']; 
+		$numero = $_POST['number'];
+		$senha = $_POST['password'];
+		
+
+	$result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, numero, senha) VALUES ('$nome', '$email', '$numero', '$senha')");
+}
+
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -14,7 +31,7 @@
             <img src="undraw_good_doggy_re_eet7.svg">
         </div>
         <div class="form">
-            <form action="validacao.php" method="post">
+            <form action="cadastro.php" method="post">
                 <div class="logo">
                     <img src="logogato.png" width="160" height="65" />
                     <div class="login-button">
@@ -45,10 +62,12 @@
                         <input id="password" type="password" name="password" placeholder="Digite sua senha" required>
                     </div>
                 </div>
-    
-                    <div class="button">
-                        <button type="submit" name="submit">Cadastrar</button>
-                    </div>
+                <div class="continue-button">
+                <div class="botaocontinuar">
+                <button type="submit" name="submit" id="submit">Cadastrar </button> </a>
+                </div>
+               
+            </div>
                 </div>
             </form>
         </div>
