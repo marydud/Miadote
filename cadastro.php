@@ -14,7 +14,7 @@ if(isset($_POST['submit']))
 	$result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, numero, senha) VALUES ('$nome', '$email', '$numero', '$senha')");
     if (mysqli_insert_id ($conexao)){
         $_SESSION['msg'] = "Usuário cadastrado com sucesso";
-        header ("Location: cadastro.php");
+        header ("Location: login.php");
     }else{ 
         header("Location: cadastro.php");
     }
