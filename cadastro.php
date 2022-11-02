@@ -1,5 +1,5 @@
 <?php
-
+session_star();
 if(isset($_POST['submit']))
 
 {
@@ -12,6 +12,12 @@ if(isset($_POST['submit']))
 		
 
 	$result = mysqli_query($conexao, "INSERT INTO usuarios (nome, email, numero, senha) VALUES ('$nome', '$email', '$numero', '$senha')");
+    if (mysqli_insert_id ($conexao)){
+        $_SESSION['msg'] = "Usuário cadastrado com sucesso";
+        header ("Location: cadastro.php");
+    }else{ 
+        header("Location: cadastro.php");
+    }
 }
 
 ?>
@@ -31,6 +37,12 @@ if(isset($_POST['submit']))
             <img src="undraw_good_doggy_re_eet7.svg">
         </div>
         <div class="form">
+            <?php
+            if (isset ($_SESSION['msg'])) {
+                echo $_SESSION['msg'];
+                unset ($_SESSION['msg']);
+            }
+            ?>
             <form action="cadastro.php" method="post">
                 <div class="logo">
                     <img src="logogato.png" width="160" height="65" />
