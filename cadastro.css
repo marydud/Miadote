@@ -59,19 +59,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
+    flex-direction: row;
     background-color: #fff;
     padding: 3rem;
     overflow-x: hidden;
     overflow-y: auto;
+    flex-wrap: wrap;
 }
 
 .form-header {
     width: 100%;
-    height: 10%;
+    height: 5%;
     display: flex;
-    margin-top: 3rem;
-    padding-bottom: 20px;
     justify-content: space;
     align-items: flex-start;
 }
@@ -115,9 +114,10 @@ body {
     flex-direction: row;
     flex-wrap: wrap;
     column-gap: 125px;
-    height: 25%;
-    width: 80%;
+    row-gap: 30px;
     justify-content: space-around;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .input-box {
@@ -146,8 +146,8 @@ body {
 }
 
 .input-box label {
-    font-size: 0.75rem;
-    font-weight: 600;
+    font-size: 0.90rem;
+    font-weight: bold;
     color: #000000c0;
 }
 
@@ -157,18 +157,15 @@ body {
 
 .continue-button {
     display: flex;
-    width: 100%;
-    justify-content: baseline;
-    gap: 30px;
+    align-items: flex-end;
+    gap: 20px;
 }
 
 .continue-button button {
-    padding-top: 300px;
-    width: 30%;
+    width: 125px;
     border: none;
     background-color: #622189;
     padding: 0.62rem;
-    width: 150px;
     border-radius: 5px;
     cursor: pointer;
 }
@@ -191,10 +188,7 @@ body {
     .form {
         width: 100%;
     }
-    .continue-button {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
+    
     .input-group {
         column-gap: 50px;
     }
@@ -212,7 +206,9 @@ body {
     }
     .form {
         width: 100%;
+
     }
+
 }
 
 
@@ -225,9 +221,7 @@ body {
     .logo {
         display: flex;
     }
-    .continue-button {
-        justify-content: center;
-    }
+    
     .login-button-baixo {
         display: none;
     }
@@ -243,12 +237,11 @@ body {
     .logo {
         display: flex;
     }
+
     .form-image img {
         width: 100%;
     }
-    .continue-button {
-        justify-content: center;
-    }
+    
     .login-button-baixo {
         display: none;
     }
