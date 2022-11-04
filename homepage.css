@@ -1,0 +1,74 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.background{
+    
+    background-image: url('Venha_me_Miadotar.png');
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+.background header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.botoes{
+    width: 25%;
+    height: 8%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.botoes button{
+    width: 37%;
+    height: 50px;
+    font-size: 24px;
+    font-weight: 1500px;
+    font-family: Nunito;
+    border-radius: 35px;
+    border-width: 0px;
+    box-shadow: 1px 1px 5px #000000;
+}
+
+.botao-cadastrar{
+    background-color: #E7B0F8;
+}
+
+.botao-cadastrar a{
+    text-decoration: none;
+    color: black;
+}
+
+.botao-entrar{
+    background-color: white;
+}
+
+.botao-entrar a{
+    color: black;
+    text-decoration: none;
+}
+
+.botao-cadastrar :hover{
+    background-color: #6e3b7e;
+}
+
+.botao-entrar :hover{
+    background-color: #6e3b7e;
+}
+
+.animais{
+    position:absolute;
+    width: 80%;
+    height: 40%;
+
+}
